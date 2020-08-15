@@ -43,9 +43,6 @@ sevlst = []
 
 wlst = []
 
-x = len(llist)
-y = x**x
-
 for elem in llist:
     for elem2 in llist:
         for elem3 in llist:
