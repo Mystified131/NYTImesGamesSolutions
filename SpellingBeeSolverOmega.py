@@ -4,8 +4,6 @@ from itertools import combinations
 
 d = enchant.Dict("en_US")
 
-#instr = ['u', 'a', 'l', 'd', 'y', 'b', 'i']
-
 instr = []
 
 for x in range(7):
