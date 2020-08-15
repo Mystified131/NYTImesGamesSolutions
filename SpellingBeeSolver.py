@@ -47,8 +47,7 @@ itlst = []
 
 tlst = []
 
-x = len(ilist)
-y = x**x
+
 
 for elem in ilist:
     for elem2 in ilist:
@@ -65,8 +64,6 @@ fivlst = []
 
 ulst = []
 
-x = len(jlist)
-y = x**x
 
 for elem in jlist:
     for elem2 in jlist:
@@ -82,8 +79,6 @@ sixlst = []
 
 vlst = []
 
-x = len(klist)
-y = x**x
 
 for elem in klist:
     for elem2 in klist:
@@ -101,8 +96,6 @@ sevlst = []
 
 wlst = []
 
-x = len(llist)
-y = x**x
 
 for elem in llist:
     for elem2 in llist:
