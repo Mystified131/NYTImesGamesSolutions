@@ -31,6 +31,14 @@ print("This may take a moment.")
 
 print("")
 
+print("Here are the solutions:")
+
+print("")
+
+print("Check for modern parlance. Some may not appear in NY Times word list:")
+
+print("")
+
 wdlst = []
 
 worm = list(permutations(biglst, 4))

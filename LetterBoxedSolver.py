@@ -19,7 +19,13 @@ letlst.append([oplst[9], oplst[10], oplst[11]])
 
 print("")
 
+print("Please be patient. The possibilties may take some minues to generate. Thank you.")
+
+print("")
+
 print(letlst)
+
+print("")
 
 letdict = {}
 
@@ -84,6 +90,7 @@ for elem in woro:
 
         wdlst.append(astr)
 
+print("")
 
 print(wdlst)
 
@@ -156,6 +163,12 @@ r = len(letlst)
                                 #print ([elem, elem2])
 
                                 #subs.append([elem, elem2])
+
+print("")
+print("Possible solutions:")
+print("")
+print("Most work, but check for modern parlance and some letter duplication:")
+print("")
 
 for elem in wdlst:
     for elem2 in wdlst:
