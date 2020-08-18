@@ -167,7 +167,7 @@ r = len(letlst)
 print("")
 print("Possible solutions (this may take a moment):")
 print("")
-print("Most work, but check for modern parlance and some letter duplication:")
+print("Most work, but check for modern parlance:")
 print("")
 
 for elem in wdlst:
@@ -223,22 +223,47 @@ for elem in wdlst:
                             if not kk:
 
                                 letlst = []
+                            
+                                #lotl = []
+
+                                #ltl1 = []
+
+                                #ltl2 = []
+
+                                #ltl3 = []
 
                                 for ltr in elem:
 
                                     letlst.append(ltr)
 
+                                    #ltl1.append(ltr)        
+
                                 for ltr in elem2:
 
                                     letlst.append(ltr)
+
+                                    #ltl2.append(ltr)
 
                                 for ltr in elem3:
 
                                     letlst.append(ltr)
 
+                                    #ltl3.append(ltr)
+
                                 letset = set(letlst)
 
                                 litset = list(letset)
+
+                                #l1 = set(ltl1)
+                                #l2 = set(ltl2)
+                                #l3 = set (ltl3)
+
+                                #for elem in l1:
+                                    #lotl.append(elem)
+                                #for elem in l2:
+                                    #lotl.append(elem)
+                                #for elem in l3:
+                                    #lotl.append(elem)
 
                                 q = all(x in litset for x in oplst)
 
@@ -246,17 +271,20 @@ for elem in wdlst:
 
                                     if len(litset) == 12:
 
+                                        #if len(lotl) == 14:
+
                                         print ([elem, elem2, elem3])
 
                                         subs.append([elem, elem2, elem3])
 
+print("")
 
 print(subs)
 
 outfile = open("LetterBoxesSolution.txt", "w")
 
 for elem in subs:
-    outfile.write(elem + '\n')
+    outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2] + '\n')
 
 outfile.close()
 
