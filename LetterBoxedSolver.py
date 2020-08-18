@@ -165,7 +165,7 @@ r = len(letlst)
                                 #subs.append([elem, elem2])
 
 print("")
-print("Possible solutions:")
+print("Possible solutions (this may take a moment):")
 print("")
 print("Most work, but check for modern parlance and some letter duplication:")
 print("")
