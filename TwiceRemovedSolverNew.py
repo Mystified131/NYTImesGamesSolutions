@@ -21,34 +21,40 @@ for elem in conlst:
 solvlst = []
 
 for wd in wordstt:
+    elemlst = []
     z = len(wd) + 4
+    y = len(wd) + 2
     minilst = []
-    sublst = []
-    for el in wd:
-        sublst.append(el)
     
-    for rog in wiff:
 
-        sub2lst = []
-        sub2lst.append(rog[0])
-        sub2lst.append(rog[1])
-        sub2lst.append(rog[0])
-        sub2lst.append(rog[1])
+    for bam in wiff:
+        sublst = []
 
-        for tab in sublst:
-            sub2lst.append(tab)
-        wigg = list(permutations(sub2lst, z))
+        for el in wd:
+            sublst.append(el)
+
+        sublst.append(bam)
+        sublst.append(bam)
+
+        elemlst.append(sublst)
+
+        wigg = list(permutations(sublst, y))
 
         for trob in wigg:
 
             teststr = ""
 
             for lat in trob:
-                teststr += lat
+                if len(lat) == 1:
+                    teststr += lat
+                if len(lat) == 2:
+                    teststr += lat[0]
+                    teststr += lat[1]
 
             if d.check(teststr) and teststr not in minilst:
 
                 print(teststr)
+
                 minilst.append(teststr)
                    
 
