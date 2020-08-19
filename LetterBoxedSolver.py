@@ -98,72 +98,6 @@ subs = []
 
 r = len(letlst)
 
-#for elem in wdlst:
-    #for elem2 in wdlst:
-        #if elem[-1] == elem2[0]:
-            #if [elem, elem2] not in subs:                                     
-
-                #numlst = []
-
-                #j = len(elem)
-
-                #for k in range(j):
-
-                    #kstr = elem[k]
-
-                    #for l in range(r):
-
-                        #if kstr in letlst[l]:
-
-                            #numlst.append(l)
-
-                #z = any(sum(1 for _ in g) > 1 for _, g in groupby(numlst))
-
-                #numlst2 = []
-
-                #j2 = len(elem2)
-
-                #for k2 in range(j2):
-
-                    #kstr2 = elem2[k2]
-
-                    #for l2 in range(r):
-
-                        #if kstr2 in letlst[l2]:
-
-                            #numlst2.append(l2)
-
-                #s = any(sum(1 for _ in g) > 1 for _, g in groupby(numlst2))
-
-                    
-                #if not z:
-
-                   # if not s:
-
-                        #letlst = []
-
-                        #for ltr in elem:
-
-                            #etlst.append(ltr)
-
-                        #for ltr in elem2:
-
-                            #etlst.append(ltr)
-
-                        #letset = set(letlst)
-
-                        #litset = list(letset)
-
-                        #q = all(x in litset for x in oplst)
-
-                        #if q:
-
-                            #if len(litset) == 12:
-   
-                                #print ([elem, elem2])
-
-                                #subs.append([elem, elem2])
-
 print("")
 print("Possible solutions (this may take a moment):")
 print("")
@@ -223,47 +157,22 @@ for elem in wdlst:
                             if not kk:
 
                                 letlst = []
-                            
-                                #lotl = []
-
-                                #ltl1 = []
-
-                                #ltl2 = []
-
-                                #ltl3 = []
 
                                 for ltr in elem:
 
-                                    letlst.append(ltr)
-
-                                    #ltl1.append(ltr)        
+                                    letlst.append(ltr)     
 
                                 for ltr in elem2:
 
                                     letlst.append(ltr)
 
-                                    #ltl2.append(ltr)
-
                                 for ltr in elem3:
 
                                     letlst.append(ltr)
 
-                                    #ltl3.append(ltr)
-
                                 letset = set(letlst)
 
                                 litset = list(letset)
-
-                                #l1 = set(ltl1)
-                                #l2 = set(ltl2)
-                                #l3 = set (ltl3)
-
-                                #for elem in l1:
-                                    #lotl.append(elem)
-                                #for elem in l2:
-                                    #lotl.append(elem)
-                                #for elem in l3:
-                                    #lotl.append(elem)
 
                                 q = all(x in litset for x in oplst)
 
@@ -271,22 +180,10 @@ for elem in wdlst:
 
                                     if len(litset) == 12:
 
-                                        #if len(lotl) == 14:
-
                                         print ([elem, elem2, elem3])
 
                                         subs.append([elem, elem2, elem3])
 
-print("")
-
-print(subs)
-
-outfile = open("LetterBoxesSolution.txt", "w")
-
-for elem in subs:
-    outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2] + '\n')
-
-outfile.close()
 
 #for elem in wdlst:
     #for elem2 in wdlst:
@@ -386,6 +283,18 @@ outfile.close()
                                                 #print ([elem, elem2, elem3, elem4])
    
                                                 #subs.append([elem, elem2, elem3, elem4])
+
+
+print("")
+
+print(subs)
+
+outfile = open("LetterBoxesSolution.txt", "w")
+
+for elem in subs:
+    outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2] + '\n')
+
+outfile.close()
 
 
 
