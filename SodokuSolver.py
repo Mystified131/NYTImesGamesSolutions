@@ -1,0 +1,169 @@
+
+import itertools
+
+a = [[0, 2, 0, 5, 0, 0, 8, 7, 6],
+ [7, 0, 0, 1, 8, 0, 0, 5, 0],
+ [8, 5, 9, 7, 0, 0, 0, 4, 0],
+ [5, 9, 0, 0, 0, 4, 6, 8, 1],
+ [0, 1, 0, 0, 3, 0, 0, 0, 0],
+ [0, 0, 0, 8, 6, 0, 0, 9, 5],
+ [2, 0, 7, 0, 0, 8, 0, 0, 9],
+ [9, 0, 4, 0, 0, 7, 2, 0, 8],
+ [0, 0, 0, 0, 0, 2, 4, 6, 0]]
+
+b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
+
+
+suba = []
+
+subb = []
+
+for x in range(9):
+    suba = []
+    for x2 in range(9):
+        if ((a)[x][x2]) != 0:
+            suba.append((a)[x][x2])
+
+    subb.append(suba)
+
+subc = []
+
+subd = []
+
+for y in range(9):
+    subc = []
+    for x in range(9):
+        if ((a)[x][y]) != 0:
+            subc.append((a)[x][y])
+
+    subd.append(subc)
+
+sube = []
+
+subf = []
+
+alst = []
+
+
+for x in range(9):
+    sube = []
+    for y in range(9):
+        neglst = []
+        c = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        for elem in subb[x]:
+            neglst.append(elem)
+        for elem2 in subd[y]:
+            neglst.append(elem2)
+        negst = list(set(neglst))
+        for elem3 in negst:
+            c.remove(elem3)
+
+        sube.append(c)
+
+    subf.append(sube)
+
+subh = []
+
+subi = []
+
+subj = []
+
+for x in range(9):
+    subh = []
+    for y in range(9):
+        subj = []
+        if a[x][y] != 0:
+            subj.append(a[x][y])
+            subh.append(subj)
+        if a[x][y] == 0:
+            subh.append(subf[x][y])
+        tup = tuple(subh)
+
+    subi.append(tup)
+
+perma = []
+
+subx = []
+
+for x in range(9):
+    subx = []
+    y = 0
+ 
+    for elem in subi[x][y]:
+        for elem2 in subi[x][y+1]:
+            for elem3 in subi[x][y+2]:
+                for elem4 in subi[x][y+3]:
+                    for elem5 in subi[x][y+4]:
+                        for elem6 in subi[x][y+5]:
+                            for elem7 in subi[x][y+6]:
+                                for elem8 in subi[x][y+7]:
+                                   
+                                    for elem9 in subi[x][y+8]:
+
+                                        ulst = []
+                                        slst = []
+                
+                                        slst.append(elem)
+                                        slst.append(elem2)
+                                        slst.append(elem3)
+                                        slst.append(elem4)
+                                        slst.append(elem5)
+                                        slst.append(elem6)
+                                        slst.append(elem7)
+                                        slst.append(elem8)
+                                        slst.append(elem9)
+                                        
+
+
+                                        ulst = list(set(slst))
+                                        if len(ulst) > 8:
+                                            if slst not in subx:
+                                                batman = tuple(slst)
+                                                subx.append(batman)
+
+    supman = tuple(subx)
+    perma.append(supman)                                            
+
+
+ ###############################################
+
+totposs = []
+
+for elem in perma[0]:
+    for elem2 in perma[1]:
+        for elem3 in perma[2]:
+            for elem4 in perma[3]:
+                for elem5 in perma[4]:
+                    for elem6 in perma[5]:
+                        for elem7 in perma[6]:
+                            for elem8 in perma[7]:
+                                for elem9 in perma[8]:
+
+                                    subm = []
+                                    ulist = []
+                                 
+                                    err = 0
+
+                                    for y in range(9):
+                                        nsum = elem[y]  + elem2[y] + elem3[y] + elem4[y] + elem5[y] + elem6[y] + elem7[y] + elem8[y] + elem9[y]
+
+                                        if nsum != 45:
+
+                                            err = 1
+
+                                    if err < 1: 
+
+                                        subm.append(elem)
+                                        subm.append(elem2)
+                                        subm.append(elem3)
+                                        subm.append(elem4)
+                                        subm.append(elem5)
+                                        subm.append(elem6)
+                                        subm.append(elem7)
+                                        subm.append(elem8)
+                                        subm.append(elem9)
+                                                
+                                        totposs.append(subm)
+
+print(totposs)
+
