@@ -1,15 +1,13 @@
 
-import itertools
-
-a = [[0, 2, 0, 5, 0, 0, 8, 7, 6],
- [7, 0, 0, 1, 8, 0, 0, 5, 0],
- [8, 5, 9, 7, 0, 0, 0, 4, 0],
- [5, 9, 0, 0, 0, 4, 6, 8, 1],
- [0, 1, 0, 0, 3, 0, 0, 0, 0],
- [0, 0, 0, 8, 6, 0, 0, 9, 5],
- [2, 0, 7, 0, 0, 8, 0, 0, 9],
- [9, 0, 4, 0, 0, 7, 2, 0, 8],
- [0, 0, 0, 0, 0, 2, 4, 6, 0]]
+a = [[0, 0, 1, 7, 0, 0, 5, 0, 0],
+ [0, 0, 7, 2, 4, 0, 0, 0, 0],
+ [0, 4, 0, 0, 1, 8, 9, 0, 7],
+ [0, 6, 0, 0, 0, 0, 0, 0, 8],
+ [0, 0, 9, 0, 2, 0, 0, 1, 0],
+ [7, 0, 8, 0, 5, 6, 2, 0, 0],
+ [0, 0, 0, 0, 0, 0, 4, 3, 0],
+ [0, 0, 0, 0, 0, 0, 6, 0, 0],
+ [5, 0, 6, 0, 0, 0, 0, 0, 0]]
 
 b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
 
@@ -102,16 +100,26 @@ for x in range(9):
 
                                         ulst = []
                                         slst = []
+
+                                        err = 0
+
+                                        nsum = elem  + elem2 + elem3 + elem4 + elem5 + elem6 + elem7 + elem8 + elem9
+
+                                        if nsum != 45:
+
+                                            err = 1
+
+                                        if err < 1: 
                 
-                                        slst.append(elem)
-                                        slst.append(elem2)
-                                        slst.append(elem3)
-                                        slst.append(elem4)
-                                        slst.append(elem5)
-                                        slst.append(elem6)
-                                        slst.append(elem7)
-                                        slst.append(elem8)
-                                        slst.append(elem9)
+                                            slst.append(elem)
+                                            slst.append(elem2)
+                                            slst.append(elem3)
+                                            slst.append(elem4)
+                                            slst.append(elem5)
+                                            slst.append(elem6)
+                                            slst.append(elem7)
+                                            slst.append(elem8)
+                                            slst.append(elem9)
                                         
 
 
@@ -119,6 +127,7 @@ for x in range(9):
                                         if len(ulst) > 8:
                                             if slst not in subx:
                                                 batman = tuple(slst)
+
                                                 subx.append(batman)
 
     supman = tuple(subx)
@@ -167,3 +176,12 @@ for elem in perma[0]:
 
 print(totposs)
 
+a = [[0, 2, 0, 5, 0, 0, 8, 7, 6],
+ [7, 0, 0, 1, 8, 0, 0, 5, 0],
+ [8, 5, 9, 7, 0, 0, 0, 4, 0],
+ [5, 9, 0, 0, 0, 4, 6, 8, 1],
+ [0, 1, 0, 0, 3, 0, 0, 0, 0],
+ [0, 0, 0, 8, 6, 0, 0, 9, 5],
+ [2, 0, 7, 0, 0, 8, 0, 0, 9],
+ [9, 0, 4, 0, 0, 7, 2, 0, 8],
+ [0, 0, 0, 0, 0, 2, 4, 6, 0]]
