@@ -203,7 +203,7 @@ for elem in perma[0]:
                                                 
                                         totposs.append(subm)
 
-print("Answer:")
+print("Possible Answer(s):")
 
 print("")
 
