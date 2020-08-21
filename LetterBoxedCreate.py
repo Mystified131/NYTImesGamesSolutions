@@ -5,13 +5,13 @@ from subprocess import call
 import datetime
 
 right_now = datetime.datetime.now().isoformat()
-    list = []
+list = []
 
-    for i in right_now:
-        if i.isnumeric():
-           list.append(i)
+for i in right_now:
+    if i.isnumeric():
+        list.append(i)
 
-    tim = ("".join(list))
+tim = ("".join(list))
 
 d = enchant.Dict("en_US")
 
