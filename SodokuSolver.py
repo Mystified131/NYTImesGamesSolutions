@@ -9,8 +9,8 @@ for x1 in range(9):
 
     for x in range(9):
         print("")
-        numr = input("Please enter one number, in order, then press enter: ")
-        shlst.append(numr)
+        numr = input("Please enter one number, in order, then press enter. For blanks please enter a zero: ")
+        shlst.append(int(numr))
 
     a.append(shlst)
 
