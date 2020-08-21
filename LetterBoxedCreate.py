@@ -1,6 +1,7 @@
 import enchant
 from itertools import permutations
 import random
+from subprocess import call
 
 d = enchant.Dict("en_US")
 
@@ -312,12 +313,24 @@ print("")
 
 print(subs)
 
+if not subs:
+    print("")
+    print("Trying again!")
+    print("")
+    call(["python", "LetterBoxCreate.py"])
+
 outfile = open("LetterBoxesSolution.txt", "w")
+
+for elem in letlst:
+    outfile.write("[" + elem[0] + ", " + elem[1] + ", " + elem[2]  +  "], " + "[" + elem[3] + ", " + elem[4]  + ", " + elem[5] + "], " + "[" +  elem[6]  + ", " + elem[7] + ", " + elem[8]  + "], " + "[" + elem[9] + ", " + elem[10]  + ", " + elem[11] + "]" + '\n')
 
 for elem in subs:
     outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2] + '\n')
 
 outfile.close()
+
+
+## THE GHOST OF THE SHADOW ##
 
 
 
