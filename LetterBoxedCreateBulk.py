@@ -349,7 +349,7 @@ for elem2 in subs:
 
 outfile.close()
 
- call(["python", "LetterBoxedCreate.py"])
+call(["python", "LetterBoxedCreate.py"])
 
 
 ## THE GHOST OF THE SHADOW ##
