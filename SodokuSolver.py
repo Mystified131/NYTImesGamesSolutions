@@ -203,14 +203,20 @@ for elem in perma[0]:
                                                 
                                         totposs.append(subm)
 
-print("Possible Answer(s):")
+lensol = ""
+lensol = str(len(totposs))
+
+print("Possible Answer(s): " + lensol)
 
 print("")
 
-print(totposs)
+for elem in totposs:
+    for x in range(9):
+        print(elem[x])
+    print("")
 
-print("")
-
+print(""
+)
 ## THE GHOST OF THE SHADOW ##
 
 a = [[0, 2, 0, 5, 0, 0, 8, 7, 6],
