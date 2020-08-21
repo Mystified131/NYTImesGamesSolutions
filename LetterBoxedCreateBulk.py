@@ -323,7 +323,7 @@ print("")
 
 print(subs)
 
-if not subs:
+if len(subs) == 0:
     print("")
     print("Trying again!")
     print("")
