@@ -158,9 +158,6 @@ outfile.write('\n')
 outfile.write (keyletr + '\n' )
 outfile.write ("" + '\n' )
 
-outfile.write('\n')
-outfile.write ("" + '\n' )
-
 for elem in wdlst:
     outfile.write(elem + '\n')
 
