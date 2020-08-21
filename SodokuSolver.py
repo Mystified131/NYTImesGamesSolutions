@@ -207,8 +207,9 @@ print("Answer:")
 
 print("")
 
-for x in range(9):
-    print(totposs[x])
+print(totposs)
+
+print("")
 
 ## THE GHOST OF THE SHADOW ##
 
