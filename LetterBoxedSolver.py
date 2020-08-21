@@ -1,5 +1,15 @@
 import enchant
 from itertools import permutations
+import datetime
+
+right_now = datetime.datetime.now().isoformat()
+tlist = []
+
+for i in right_now:
+    if i.isnumeric():
+        tlist.append(i)
+
+tim = ("".join(tlist))
 
 d = enchant.Dict("en_US")
 
@@ -289,7 +299,9 @@ print("")
 
 print(subs)
 
-outfile = open("LetterBoxesSolution.txt", "w")
+titstr = "LetterBoxedSolution." + tim + ".txt"
+
+outfile = open(titstr, "w")
 
 for elem in subs:
     outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2] + '\n')

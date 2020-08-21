@@ -1,3 +1,13 @@
+import datetime
+
+right_now = datetime.datetime.now().isoformat()
+tlist = []
+
+for i in right_now:
+    if i.isnumeric():
+        tlist.append(i)
+
+tim = ("".join(tlist))
 
 a = []
 

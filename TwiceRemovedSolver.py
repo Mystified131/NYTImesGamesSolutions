@@ -1,6 +1,16 @@
 
 import enchant
 from itertools import  permutations
+import datetime
+
+right_now = datetime.datetime.now().isoformat()
+tlist = []
+
+for i in right_now:
+    if i.isnumeric():
+        tlist.append(i)
+
+tim = ("".join(tlist))
 
 d = enchant.Dict("en_US")
 

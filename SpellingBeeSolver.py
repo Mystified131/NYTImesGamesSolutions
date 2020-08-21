@@ -1,6 +1,16 @@
 
 import enchant
 from itertools import  permutations
+import datetime
+
+right_now = datetime.datetime.now().isoformat()
+tlist = []
+
+for i in right_now:
+    if i.isnumeric():
+        tlist.append(i)
+
+tim = ("".join(tlist))
 
 d = enchant.Dict("en_US")
 
@@ -164,7 +174,9 @@ print("")
 
 print(wdlst)
 
-outfile = open("BeeSolution.txt", "w")
+titstr = "SpellingBeeSolution." + tim + ".txt"
+
+outfile = open(titstr, "w")
 
 for elem in wdlst:
     outfile.write(elem + '\n')
