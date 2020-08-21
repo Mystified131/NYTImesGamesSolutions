@@ -323,7 +323,7 @@ print("")
 
 print(subs)
 
-if not subs:
+if len(subs) < 1:
     print("")
     print("Trying again!")
     print("")
@@ -349,7 +349,7 @@ for elem2 in subs:
 
 outfile.close()
 
-call(["python", "LetterBoxedCreate.py"])
+call(["python", "LetterBoxedCreateBulk.py"])
 
 
 ## THE GHOST OF THE SHADOW ##
