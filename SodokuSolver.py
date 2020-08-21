@@ -163,7 +163,6 @@ for x in range(9):
     supman = tuple(vlst)
     perma.append(supman)                                            
 
-
  ###############################################
 
 totposs = []
@@ -207,7 +206,6 @@ for elem in perma[0]:
 print("Answer:")
 
 print("")
-
 
 for x in range(9):
     print(totposs[x])

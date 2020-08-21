@@ -4,16 +4,14 @@ import random
 
 d = enchant.Dict("en_US")
 
-wordstt = ["LORE", "HERO", "CANT", "SURE", "SELL", "KINE", "PEON", "LICE", "ALTI", "RISE", "LINK", "LIRA", "IMAM", "FONE", "CALM", "FENCE", "CONIC", "NURSE", "VALES", "RETAG", "STAMP", "ALTER", "DEBATE", "THETICAL"]
-
 conlst = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Z"]
 vowlst = ["A",  "E",  "I", "O", "U", "Y"]
 
 sollst = []
 
-for fish in range(40000):
+for fish in range(30000):
 
-    wlen = random.randrange(3, 8)
+    wlen = random.randrange(3, 6)
 
     wdlt = []
 
@@ -39,8 +37,15 @@ for fish in range(40000):
     print(wordsam)
 
     if d.check(wordsam):
-        sollst.append(wordsam)
+        if wordsam not in sollst:
+            sollst.append(wordsam)
         print("Correct: ", wordsam)
+
+print("")
+
+print("Some palindromes are:")
+
+print("")
 
 print(sollst)
 
