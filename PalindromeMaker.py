@@ -17,10 +17,10 @@ for fish in range(30000):
 
     for x in range(wlen):
         ctr = random.randrange(10)
-        if ctr < 5:
+        if ctr < 4:
             vch = random.randrange(6)
             letch = vowlst[vch]
-        if ctr > 4:
+        if ctr > 5:
             cch = random.randrange(20)
             letch = conlst[cch]
         wdlt.append(letch)
