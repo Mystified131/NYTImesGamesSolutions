@@ -2,6 +2,16 @@ import enchant
 from itertools import permutations
 import random
 from subprocess import call
+import datetime
+
+right_now = datetime.datetime.now().isoformat()
+    list = []
+
+    for i in right_now:
+        if i.isnumeric():
+           list.append(i)
+
+    tim = ("".join(list))
 
 d = enchant.Dict("en_US")
 
@@ -319,9 +329,13 @@ if not subs:
     print("")
     call(["python", "LetterBoxedCreate.py"])
 
-outfile = open("LetterBoxedSolution.txt", "w")
+titstr = "LetterBoxedSolution." + tim + ".txt"
+
+outfile = open(titstr, "w")
 
 outfile.write ("A Tenable Letter Boxed Solution." + '\n' )
+outfile.write ("" + '\n' )
+outfile.write ("Time: " + tim + '\n')
 outfile.write ("" + '\n' )
 
 for elem in oplst:
