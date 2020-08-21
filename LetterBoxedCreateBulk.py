@@ -327,7 +327,7 @@ if not subs:
     print("")
     print("Trying again!")
     print("")
-    call(["python", "LetterBoxedCreate.py"])
+    call(["python", "LetterBoxedCreateBulk.py"])
 
 titstr = "LetterBoxedSolution." + tim + ".txt"
 
