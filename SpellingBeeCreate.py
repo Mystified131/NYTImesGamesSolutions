@@ -152,6 +152,15 @@ outfile.write ("" + '\n' )
 outfile.write ("Time: " + tim + '\n')
 outfile.write ("" + '\n' )
 
+for elem in oplst:
+    outfile.write(elem + ",")
+outfile.write('\n')
+outfile.write (keyletr + '\n' )
+outfile.write ("" + '\n' )
+
+outfile.write('\n')
+outfile.write ("" + '\n' )
+
 for elem in wdlst:
     outfile.write(elem + '\n')
 
