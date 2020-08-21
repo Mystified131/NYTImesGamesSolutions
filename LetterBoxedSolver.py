@@ -308,6 +308,13 @@ for elem in subs:
 
 outfile.close()
 
+print("")
+
+print("See the output document in the same folder as your code.")
+
+print("")
+
+## THE GHOST OF THE SHADOW ##
 
 
 

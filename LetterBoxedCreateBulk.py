@@ -349,6 +349,12 @@ for elem2 in subs:
 
 outfile.close()
 
+print("")
+
+print("See the output document in the same folder as your code.")
+
+print("")
+
 call(["python", "LetterBoxedCreateBulk.py"])
 
 

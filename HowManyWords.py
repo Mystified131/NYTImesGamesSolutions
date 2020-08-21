@@ -8,8 +8,6 @@ d = enchant.Dict("en_US")
 
 sublst = []
 
-#wlist = ["s", "a", "t", "c", "h", "e", "l"]
-
 print("")
 
 print("Please enter 7 letters: ")
@@ -55,6 +53,12 @@ for elem in llist:
                             sevlst.append(wlst)
 
 outstr = []
+
+itlst = []
+
+fivlst = []
+
+sixlst = []
 
 for instr in sublst:
 
@@ -131,4 +135,12 @@ for elem in endlst:
     outfile.write(elem + '\n')
 
 outfile.close()
+
+print("")
+
+print("See the output document in the same folder as your code.")
+
+print("")
+
+## THE GHOST OF THE SHADOW ##
 

@@ -266,18 +266,6 @@ for elem in wdlst:
 
                                         subs.append([elem, elem2, elem3])
 
-print("")
-
-print(subs)
-
-titstr = "LetterBoxedSolution." + tim + ".txt"
-
-outfile = open(titstr, "w")
-
-for elem in subs:
-    outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2] + '\n')
-
-outfile.close()
 
 #for elem in wdlst:
     #for elem2 in wdlst:
@@ -377,6 +365,27 @@ outfile.close()
                                                 #print ([elem, elem2, elem3, elem4])
    
                                                 #subs.append([elem, elem2, elem3, elem4])
+
+print("")
+
+print(subs)
+
+titstr = "LetterBoxedSolution." + tim + ".txt"
+
+outfile = open(titstr, "w")
+
+for elem in subs:
+    outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2] + '\n')
+
+outfile.close()
+
+print("")
+
+print("See the output document in the same folder as your code.")
+
+print("")
+
+## THE GHOST OF THE SHADOW ##
 
 
 

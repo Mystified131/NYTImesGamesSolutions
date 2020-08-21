@@ -44,5 +44,7 @@ for fish in range(40000):
 
 print(sollst)
 
+## THE GHOST OF THE SHADOW ##
+
 
 
