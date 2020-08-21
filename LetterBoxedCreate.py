@@ -324,9 +324,11 @@ outfile = open("LetterBoxedSolution.txt", "w")
 outfile.write ("A Tenable Letter Boxed Solution." + '\n' )
 outfile.write ("" + '\n' )
 
-for elem in letlst:
-    outfile.write(elem + '\n')
-    outfile.write ("" + '\n' )
+for elem in oplst:
+    outfile.write(elem + ",")
+
+outfile.write('\n')
+outfile.write ("" + '\n' )
 
 for elem2 in subs:
     outfile.write(elem2[0] + ", " + elem2[1] + ", " + elem2[2] + '\n')
