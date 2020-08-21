@@ -16,6 +16,10 @@ for x1 in range(9):
 
 print("")
 
+print("Your entry:")
+
+print("")
+
 print(a)
 
 print("")
@@ -191,6 +195,9 @@ for elem in perma[0]:
                                         totposs.append(subm)
 
 print("Answer:")
+
+print("")
+
 print(totposs)
 
 a = [[0, 2, 0, 5, 0, 0, 8, 7, 6],
