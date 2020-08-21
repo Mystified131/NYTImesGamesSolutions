@@ -6,7 +6,7 @@ import random
 
 print("")
 
-quan = input("How many puzzles shall the code create for you?: ")
+quan = input("How many puzzles shall the code create try for you? Only puzzles with more than 20 possible answers will be saved: ")
 
 quant = int(quan)
 
@@ -155,25 +155,27 @@ for bulk in range(quant):
 
     print("")
 
-    titstr = "SpellingBeeCreation." + tim + ".txt"
+    if len(wdlst) > 20:
 
-    outfile = open(titstr, "w")
+        titstr = "SpellingBeeCreation." + tim + ".txt"
 
-    outfile.write ("A Tenable Spelling Bee Creation." + '\n' )
-    outfile.write ("" + '\n' )
-    outfile.write ("Time: " + tim + '\n')
-    outfile.write ("" + '\n' )
+        outfile = open(titstr, "w")
 
-    for elem in oplst:
-        outfile.write(elem + ",")
-    outfile.write('\n')
-    outfile.write (keyletr + '\n' )
-    outfile.write ("" + '\n' )
+        outfile.write ("A Tenable Spelling Bee Creation." + '\n' )
+        outfile.write ("" + '\n' )
+        outfile.write ("Time: " + tim + '\n')
+        outfile.write ("" + '\n' )
 
-    for elem in wdlst:
-        outfile.write(elem + '\n')
+        for elem in oplst:
+            outfile.write(elem + ",")
+        outfile.write('\n')
+        outfile.write (keyletr + '\n' )
+        outfile.write ("" + '\n' )
 
-    outfile.close()
+        for elem in wdlst:
+            outfile.write(elem + '\n')
+
+        outfile.close()
 
 print("")
 
