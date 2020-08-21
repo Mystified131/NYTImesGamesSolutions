@@ -317,12 +317,12 @@ if not subs:
     print("")
     print("Trying again!")
     print("")
-    call(["python", "LetterBoxCreate.py"])
+    call(["python", "LetterBoxedCreate.py"])
 
 outfile = open("LetterBoxesSolution.txt", "w")
 
-for elem in oplst:
-    outfile.write("[" + elem[0] + ", " + elem[1] + ", " + elem[2]  +  "], " + "[" + elem[3] + ", " + elem[4]  + ", " + elem[5] + "], " + "[" +  elem[6]  + ", " + elem[7] + ", " + elem[8]  + "], " + "[" + elem[9] + ", " + elem[10]  + ", " + elem[11] + "]" + '\n')
+for elem in letlst:
+    outfile.write(elem[0] + ", " + elem[1] + ", " + elem[2]  +  '\n')
 
 for elem2 in subs:
     outfile.write(elem2[0] + ", " + elem2[1] + ", " + elem2[2] + '\n')
