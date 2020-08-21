@@ -1,15 +1,26 @@
-a = [[0, 6, 7, 0, 0, 0, 9, 2, 3],
- [0, 8, 0, 0, 1, 0, 6, 0, 0],
- [0, 0, 0, 0, 6, 9, 0, 0, 1],
- [0, 0, 1, 0, 0, 0, 0, 6, 9],
- [2, 3, 9, 6, 0, 7, 5, 1, 4],
- [6, 4, 0, 0, 0, 0, 8, 0, 0],
- [7, 0, 0, 1, 4, 0, 0, 0, 0],
- [0, 0, 8, 0, 2, 0, 0, 5, 0],
- [3, 9, 2, 0, 0, 0, 1, 4, 0]]
 
 b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
 
+for x1 in range(9):
+
+    shlst = []
+
+    for x in range(9):
+        print("")
+        numr = input("Please enter one number, in order, then press enter: ")
+        shlst.append(numr)
+
+    a.append(shlst)
+
+print("")
+
+print(a)
+
+print("")
+
+print("The solution should appear quite rapidly or not at all, depending on your processor strength.")
+
+print("")
 
 suba = []
 
