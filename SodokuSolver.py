@@ -13,26 +13,16 @@ a = []
 
 b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
 
-#for x1 in range(9):
+for x1 in range(9):
 
-    #shlst = []
+    shlst = []
 
-    #for x in range(9):
-        #print("")
-        #numr = input("Please enter one number, in order, then press enter. For blanks please enter a zero: ")
-        #shlst.append(int(numr))
+    for x in range(9):
+        print("")
+        numr = input("Please enter one number, in order, then press enter. For blanks please enter a zero: ")
+        shlst.append(int(numr))
 
-    #a.append(shlst)
-
-a = [[0, 2, 0, 5, 0, 0, 8, 7, 6],
- [7, 0, 0, 1, 8, 0, 0, 5, 0],
- [8, 5, 9, 7, 0, 0, 0, 4, 0],
- [5, 9, 0, 0, 0, 4, 6, 8, 1],
- [0, 1, 0, 0, 3, 0, 0, 0, 0],
- [0, 0, 0, 8, 6, 0, 0, 9, 5],
- [2, 0, 7, 0, 0, 8, 0, 0, 9],
- [9, 0, 4, 0, 0, 7, 2, 0, 8],
- [0, 0, 0, 0, 0, 2, 4, 6, 0]]
+    a.append(shlst)
 
 
 print("")
