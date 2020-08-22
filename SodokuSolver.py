@@ -13,16 +13,27 @@ a = []
 
 b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
 
-for x1 in range(9):
+#for x1 in range(9):
 
-    shlst = []
+    #shlst = []
 
-    for x in range(9):
-        print("")
-        numr = input("Please enter one number, in order, then press enter. For blanks please enter a zero: ")
-        shlst.append(int(numr))
+    #for x in range(9):
+        #print("")
+        #numr = input("Please enter one number, in order, then press enter. For blanks please enter a zero: ")
+        #shlst.append(int(numr))
 
-    a.append(shlst)
+    #a.append(shlst)
+
+a = [[0, 2, 0, 5, 0, 0, 8, 7, 6],
+ [7, 0, 0, 1, 8, 0, 0, 5, 0],
+ [8, 5, 9, 7, 0, 0, 0, 4, 0],
+ [5, 9, 0, 0, 0, 4, 6, 8, 1],
+ [0, 1, 0, 0, 3, 0, 0, 0, 0],
+ [0, 0, 0, 8, 6, 0, 0, 9, 5],
+ [2, 0, 7, 0, 0, 8, 0, 0, 9],
+ [9, 0, 4, 0, 0, 7, 2, 0, 8],
+ [0, 0, 0, 0, 0, 2, 4, 6, 0]]
+
 
 print("")
 
@@ -68,6 +79,31 @@ subf = []
 
 alst = []
 
+sett = []
+
+subsett = []
+
+for x in range(3):
+    for y in range(3):
+        subsett = []
+        for x1 in range(3):
+            for y1 in range(3):
+                x2 = (x * 3) + x1
+                y2 = (y * 3) + y1
+                apt = a[x2][y2]
+                if apt != 0:
+                    subsett.append(apt)
+        sett.append(subsett)
+
+refset = [[1, 1, 1, 2, 2, 2, 3, 3, 3],
+[1, 1, 1, 2, 2, 2, 3, 3, 3],
+[1, 1, 1, 2, 2, 2, 3, 3, 3],
+[4, 4, 4, 5, 5, 5, 6, 6, 6],
+[4, 4, 4, 5, 5, 5, 6, 6, 6],
+[4, 4, 4, 5, 5, 5, 6, 6, 6],
+[7, 7, 7, 8, 8, 8, 9, 9, 9],
+[7, 7, 7, 8, 8, 8, 9, 9, 9], 
+[7, 7, 7, 8, 8, 8, 9, 9, 9]]
 
 for x in range(9):
     sube = []
@@ -78,7 +114,15 @@ for x in range(9):
             neglst.append(elem)
         for elem2 in subd[y]:
             neglst.append(elem2)
+
+        ss = (refset[x][y]) -1
+
+        for elem3 in sett[ss]:
+ 
+            neglst.append(elem3)
+
         negst = list(set(neglst))
+
         for elem3 in negst:
             c.remove(elem3)
 
