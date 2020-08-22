@@ -29,7 +29,7 @@ letlst.append([oplst[9], oplst[10], oplst[11]])
 
 print("")
 
-print("Please be patient. The possibilties may take some minues to generate. Thank you.")
+print("Please be patient. The possibilties may take some minutes to generate. Thank you.")
 
 print("")
 
