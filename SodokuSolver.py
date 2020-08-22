@@ -24,7 +24,6 @@ for x1 in range(9):
 
     a.append(shlst)
 
-
 print("")
 
 print("Your entry:")
@@ -36,6 +35,10 @@ print(a)
 print("")
 
 print("The solution should appear quite rapidly or not at all, depending on your processor strength.")
+
+print("")
+
+print("Observe the countdown.")
 
 print("")
 
@@ -201,6 +204,8 @@ for x in range(9):
 
 totposs = []
 
+totopp = len(perma[0]) * len(perma[1]) * len(perma[2]) * len(perma[3]) * len(perma[4]) * len(perma[5]) * len(perma[6]) * len(perma[7]) * len(perma[8])
+
 for elem in perma[0]:
     for elem2 in perma[1]:
         for elem3 in perma[2]:
@@ -210,6 +215,8 @@ for elem in perma[0]:
                         for elem7 in perma[6]:
                             for elem8 in perma[7]:
                                 for elem9 in perma[8]:
+
+                                    print(totopp)
 
                                     subm = []
                                     ulist = []
@@ -236,6 +243,8 @@ for elem in perma[0]:
                                         subm.append(elem9)
                                                 
                                         totposs.append(subm)
+
+                                    totopp -= 1
 
 lensol = ""
 lensol = str(len(totposs))
