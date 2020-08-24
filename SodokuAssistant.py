@@ -2,6 +2,16 @@ import datetime
 
 a = []
 
+a = [[0, 0, 1, 7, 0, 0, 5, 0, 0],
+[0, 0, 7, 2, 4, 0, 0, 0, 0],
+[0, 4, 0, 0, 1, 8, 9, 0, 7],
+[0, 6, 0, 0, 0, 0, 0, 0, 8],
+[0, 0, 9, 0, 2, 0, 0, 1, 0],
+[7, 0, 8, 0, 5, 6, 2, 0, 0],
+[0, 0, 0, 0, 0, 0, 4, 3, 0],
+[0, 0, 0, 0, 0, 0, 6, 0, 0],
+[5, 0, 6, 0, 0, 0, 0, 0, 0]]
+
 for x in range(81):
 
     right_now = datetime.datetime.now().isoformat()
@@ -34,17 +44,17 @@ for x in range(81):
 
         print("")
 
-        xv = int(input("Please enter the column of the new value: "))
+        xv = int(input("Please enter the row of the new value (0-8): "))
 
         print("")
 
-        xy = int(input("Please enter the row of the new value: "))
+        xy = int(input("Please enter the column of the new value (0-8): "))
 
         print("")
 
-        xv = int(input("Please enter the new value: "))
+        xval = int(input("Please enter the new value: "))
 
-        a[xv][xy] = xv
+        a[xv][xy] = xval
 
     print("")
 
@@ -52,17 +62,11 @@ for x in range(81):
 
     print("")
 
-    print(a)
+    for elemq in a:
+        print(elemq)
 
     print("")
 
-    print("The solution should appear quite rapidly or not at all, depending on your processor strength.")
-
-    print("")
-
-    print("Observe the countdown.")
-
-    print("")
 
     suba = []
 
@@ -227,7 +231,7 @@ for x in range(81):
 
     if totopp > 2600000:
 
-        print("Permutations too big to run. Let's keep filling it in.")
+        print("Permutations are: ", totopp, " (which is over 2600000, or too big to run). Let's keep filling it in.")
 
 
     if totopp < 2600000:
@@ -236,6 +240,15 @@ for x in range(81):
 
 
  ###############################################
+
+print("The solution should appear quite rapidly or not at all, depending on your processor strength.")
+
+print("")
+
+print("Observe the countdown.")
+
+print("")
+
 
 totposs = []
 
@@ -283,6 +296,12 @@ lensol = ""
 lensol = str(len(totposs))
 
 print("Possible Answer(s): " + lensol)
+
+print("")
+
+if lensol < 1:
+
+print("Possibly an incorrect entry for iteration.")
 
 print("")
 
