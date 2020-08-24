@@ -225,14 +225,14 @@ for x in range(81):
 
     totopp = len(perma[0]) * len(perma[1]) * len(perma[2]) * len(perma[3]) * len(perma[4]) * len(perma[5]) * len(perma[6]) * len(perma[7]) * len(perma[8])
 
-if totopp > 2600000:
+    if totopp > 2600000:
 
-    print("Permutations too big to run. Let's keep filling it in.")
+        print("Permutations too big to run. Let's keep filling it in.")
 
 
-if totopp < 2600000:
+    if totopp < 2600000:
 
-    break
+        break
 
 
  ###############################################
