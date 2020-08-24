@@ -44,7 +44,7 @@ for x in range(81):
 
         xv = int(input("Please enter the new value: "))
 
-        a[xv][xy = xv]
+        a[xv][xy] = xv
 
     print("")
 
