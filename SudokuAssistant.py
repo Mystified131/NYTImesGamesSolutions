@@ -2,16 +2,6 @@ import datetime
 
 a = []
 
-a = [[0, 0, 1, 7, 0, 0, 5, 0, 0],
-[0, 0, 7, 2, 4, 0, 0, 0, 0],
-[0, 4, 0, 0, 1, 8, 9, 0, 7],
-[0, 6, 0, 0, 0, 0, 0, 0, 8],
-[0, 0, 9, 0, 2, 0, 0, 1, 0],
-[7, 0, 8, 0, 5, 6, 2, 0, 0],
-[0, 0, 0, 0, 0, 0, 4, 3, 0],
-[0, 0, 0, 0, 0, 0, 6, 0, 0],
-[5, 0, 6, 0, 0, 0, 0, 0, 0]]
-
 for x in range(81):
 
     right_now = datetime.datetime.now().isoformat()
@@ -299,7 +289,7 @@ print("Possible Answer(s): " + lensol)
 
 print("")
 
-if lensol < 1:
+if len(totposs) < 1:
 
     print("Possibly an incorrect entry for iteration.")
 
