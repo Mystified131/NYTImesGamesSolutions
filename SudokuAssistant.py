@@ -2,7 +2,7 @@ import datetime
 
 a = []
 
-for x in range(81):
+for x in range(1000):
 
     right_now = datetime.datetime.now().isoformat()
     tlist = []
