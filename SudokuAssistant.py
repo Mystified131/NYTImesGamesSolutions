@@ -14,7 +14,6 @@ for x in range(81):
     tim = ("".join(tlist))
 
 
-
     if len(a) < 1:
 
         b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
@@ -30,7 +29,31 @@ for x in range(81):
 
             a.append(shlst)
 
+        print("")
+
+        print("Your entry:")
+
+        print("")
+
+        for elemq in a:
+            print(elemq)
+
+        print("")
+
+    
+
     if len(a) > 1:
+
+        print("")
+
+        print("Your entry:")
+
+        print("")
+
+        for elemq in a:
+            print(elemq)
+
+        print("")
 
         print("")
 
@@ -45,18 +68,6 @@ for x in range(81):
         xval = int(input("Please enter the new value: "))
 
         a[xv][xy] = xval
-
-    print("")
-
-    print("Your entry:")
-
-    print("")
-
-    for elemq in a:
-        print(elemq)
-
-    print("")
-
 
     suba = []
 
@@ -226,81 +237,76 @@ for x in range(81):
 
     if totopp < 2600000:
 
-        break
+        print("The solution should appear quite rapidly or not at all, depending on your processor strength.")
+
+        print("")
+
+        print("Observe the countdown.")
+
+        print("")
 
 
- ###############################################
+        totposs = []
 
-print("The solution should appear quite rapidly or not at all, depending on your processor strength.")
+        for elem in perma[0]:
+            for elem2 in perma[1]:
+                for elem3 in perma[2]:
+                    for elem4 in perma[3]:
+                        for elem5 in perma[4]:
+                            for elem6 in perma[5]:
+                                for elem7 in perma[6]:
+                                    for elem8 in perma[7]:
+                                        for elem9 in perma[8]:
 
-print("")
+                                            print(totopp)
 
-print("Observe the countdown.")
+                                            subm = []
+                                            ulist = []
+                                            
+                                            err = 0
 
-print("")
+                                            for y in range(9):
+                                                nsum = elem[y]  + elem2[y] + elem3[y] + elem4[y] + elem5[y] + elem6[y] + elem7[y] + elem8[y] + elem9[y]
 
+                                                if nsum != 45:
 
-totposs = []
+                                                    err = 1
 
-for elem in perma[0]:
-    for elem2 in perma[1]:
-        for elem3 in perma[2]:
-            for elem4 in perma[3]:
-                for elem5 in perma[4]:
-                    for elem6 in perma[5]:
-                        for elem7 in perma[6]:
-                            for elem8 in perma[7]:
-                                for elem9 in perma[8]:
+                                            if err < 1: 
 
-                                    print(totopp)
+                                                subm.append(elem)
+                                                subm.append(elem2)
+                                                subm.append(elem3)
+                                                subm.append(elem4)
+                                                subm.append(elem5)
+                                                subm.append(elem6)
+                                                subm.append(elem7)
+                                                subm.append(elem8)
+                                                subm.append(elem9)
+                                                            
+                                                totposs.append(subm)
 
-                                    subm = []
-                                    ulist = []
-                                    
-                                    err = 0
+                                            totopp -= 1
 
-                                    for y in range(9):
-                                        nsum = elem[y]  + elem2[y] + elem3[y] + elem4[y] + elem5[y] + elem6[y] + elem7[y] + elem8[y] + elem9[y]
+        lensol = ""
+        lensol = str(len(totposs))
 
-                                        if nsum != 45:
+        print("Possible Answer(s): " + lensol)
 
-                                            err = 1
+        print("")
 
-                                    if err < 1: 
+        if len(totposs) < 1:
 
-                                        subm.append(elem)
-                                        subm.append(elem2)
-                                        subm.append(elem3)
-                                        subm.append(elem4)
-                                        subm.append(elem5)
-                                        subm.append(elem6)
-                                        subm.append(elem7)
-                                        subm.append(elem8)
-                                        subm.append(elem9)
-                                                    
-                                        totposs.append(subm)
+            print("Possibly an incorrect entry for iteration.")
 
-                                    totopp -= 1
+        print("")
 
-lensol = ""
-lensol = str(len(totposs))
+        for elem in totposs:
+            for x in range(9):
+                print(elem[x])
+            print("")
 
-print("Possible Answer(s): " + lensol)
-
-print("")
-
-if len(totposs) < 1:
-
-    print("Possibly an incorrect entry for iteration.")
-
-print("")
-
-for elem in totposs:
-    for x in range(9):
-        print(elem[x])
-    print("")
-
-print("")
+        print("")
 
 ## THE GHOST OF THE SHADOW ##
 
@@ -323,4 +329,3 @@ a = [[0, 0, 1, 7, 0, 0, 5, 0, 0],
 [0, 0, 0, 0, 0, 0, 4, 3, 0],
 [0, 0, 0, 0, 0, 0, 6, 0, 0],
 [5, 0, 6, 0, 0, 0, 0, 0, 0]]
-
