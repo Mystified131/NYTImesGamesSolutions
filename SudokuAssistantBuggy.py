@@ -13,35 +13,6 @@ for x in range(1000):
 
     tim = ("".join(tlist))
 
-
-    if len(a) < 1:
-
-        b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
-
-        for x1 in range(9):
-
-            shlst = []
-
-            for x in range(9):
-                print("")
-                numr = input("Please enter one number, in order, then press enter. For blanks please enter a zero: ")
-                shlst.append(int(numr))
-
-            a.append(shlst)
-
-        print("")
-
-        print("Your entry:")
-
-        print("")
-
-        for elemq in a:
-            print(elemq)
-
-        print("")
-
-    
-
     if len(a) > 1:
 
         print("")
@@ -69,6 +40,33 @@ for x in range(1000):
 
         a[xv][xy] = xval
 
+
+    if len(a) < 1:
+
+        b = [(1, 2, 3, 4, 5, 6, 7, 8, 9)]
+
+        for x1 in range(9):
+
+            shlst = []
+
+            for x in range(9):
+                print("")
+                numr = input("Please enter one number, in order, then press enter. For blanks please enter a zero: ")
+                shlst.append(int(numr))
+
+            a.append(shlst)
+
+    print("")
+
+    print("Your entry:")
+
+    print("")
+
+    for elemq in a:
+        print(elemq)
+
+    print("")
+        
     suba = []
 
     subb = []
@@ -236,6 +234,16 @@ for x in range(1000):
 
 
     if totopp < 2600000:
+
+        print("")
+
+        print("Permutations are: ", totopp)
+
+        print("")
+
+        instr = input("Press any key to run through the permutations: ")
+
+        print("")
 
         print("The solution should appear quite rapidly or not at all, depending on your processor strength.")
 
