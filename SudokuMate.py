@@ -538,21 +538,16 @@ for pitr in range(1000):
 
     xval = int(input("Please enter the new value: "))
 
-    if xval in subi[xv][xy]:
+    ychk = []
 
-        if xval not in a[xv]:
+    for yv in range(9):
+        ychk.append(a[yv][xv])
 
-            #ytest = []
+    if xval in subi[xv][xy] and xval not in a[xy] and xval not in ychk:
 
-            #for yt in range(8):
-                #yval = a[xy][yt]
-                #ytest.append(yval)
+        a[xv][xy] = xval
 
-            #if xval not in ytest:
-
-            a[xv][xy] = xval
-
-    if xval not in subi[xv][xy] or xval in a[xv]:
+    else:
 
         print("")
 
