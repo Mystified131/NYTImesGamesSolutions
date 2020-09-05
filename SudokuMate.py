@@ -543,11 +543,14 @@ for pitr in range(1000):
     for yv in range(9):
         ychk.append(a[yv][xv])
 
-    if xval in subi[xv][xy] and xval not in a[xy] and xval not in ychk:
+    if xval in subi[xy][xv]:
+        if xval not in a[xy]:
+            if xval not in ychk:
 
-        a[xv][xy] = xval
+                a[xy][xv] = xval
 
-    else:
+
+    if a[xy][xv] != xval:
 
         print("")
 
