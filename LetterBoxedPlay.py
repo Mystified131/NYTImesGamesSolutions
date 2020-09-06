@@ -39,9 +39,9 @@ for x1 in range(12):
     astr = sublst[x1]
     oplst.append(astr)
 
-print("")
+#print("")
 
-print(oplst)
+#print(oplst)
 
 letlst.append([oplst[0], oplst[1], oplst[2]])
 letlst.append([oplst[3], oplst[4], oplst[5]])
@@ -66,7 +66,7 @@ for x in range(12):
 
     letdict[astr] = y
 
-print(letdict)
+#print(letdict)
 
 wdlst = []
 
@@ -122,21 +122,17 @@ for elem in woro:
 
         wdlst.append(astr)
 
-print("")
-
-print(wdlst)
+print("Master word list generated.")
 
 subs = []
 
 r = len(letlst)
 
 print("")
-print("Possible solutions (this may take a moment):")
+print("Working through possible solutions (this may take a moment):")
 print("")
-print("Most work, but check for modern parlance:")
-print("")
-print(letlst)
-print("")
+#print(letlst)
+#print("")
 
 for elem in wdlst:
     for elem2 in wdlst:
@@ -214,7 +210,11 @@ for elem in wdlst:
 
                                     if len(litset) == 12:
 
-                                        print ([elem, elem2, elem3])
+                                        #print ([elem, elem2, elem3])
+
+                                        print("Generating possible answers. Please wait. . .")
+
+                                        print("")
 
                                         subs.append([elem, elem2, elem3])
 
@@ -321,13 +321,15 @@ for elem in wdlst:
 
 print("")
 
-print(subs)
+#print(subs)
+
+if subs:
+    print("Answers generated.")
 
 if not subs:
-    print("")
     print("Trying again!")
     print("")
-    call(["python", "LetterBoxedCreate.py"])
+    call(["python", "LetterBoxedPlay.py"])
 
 titstr = "LetterBoxedSolution." + tim + ".txt"
 
@@ -351,9 +353,63 @@ outfile.close()
 
 print("")
 
-print("See the output document in the same folder as your code.")
+print("See the solution document in the same folder as your code.")
 
 print("")
+
+quit = 0
+
+while quit == 0:
+
+    print("")
+
+    print(letlst)
+
+    print("")
+
+    gssstr1 = input("Please enter your first of three guess words: ")
+
+    print("")
+
+    gssstr2 = input("Please enter your second of three guess words: ")
+
+    print("")
+
+    gssstr3 = input("Please enter your third of three guess words: ")
+
+    print("")
+
+    win = 0
+
+    for elem in subs:
+
+        print(elem)
+
+        if gssstr1.lower() == elem[0].lower() and gssstr2.lower() == elem[1].lower() and gssstr3.lower() == elem[2].lower():
+
+            print("A winner!")
+
+            print("")
+
+            win = 1
+
+    if win == 0:
+
+        print("Not in our calculated 3-word list. Sorry.")
+
+        print("")
+
+    outstr = input("Press q to quit or anything else to continue: ")
+
+    print("")
+
+    if outstr == "q":
+
+        break
+
+    if outstr != "q":
+
+        quit = 0
 
 ## THE GHOST OF THE SHADOW ##
 
