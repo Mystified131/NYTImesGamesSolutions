@@ -217,7 +217,7 @@ for elem in wdlst:
 
                                         #print ([elem, elem2, elem3])
 
-                                        print("Generating possible answers: ", len(subs) ". Please wait.")
+                                        print("Generating possible answers: ", len(subs), ". Please wait.")
 
                                         print("")
 
