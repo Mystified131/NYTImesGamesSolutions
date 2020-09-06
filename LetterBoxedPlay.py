@@ -357,9 +357,7 @@ print("See the solution document in the same folder as your code.")
 
 print("")
 
-quit = 0
-
-while quit == 0:
+for ctr in range(1000):
 
     print("")
 
@@ -383,15 +381,13 @@ while quit == 0:
 
     for elem in subs:
 
-        print(elem)
-
         if gssstr1.lower() == elem[0].lower() and gssstr2.lower() == elem[1].lower() and gssstr3.lower() == elem[2].lower():
 
             print("A winner!")
 
             print("")
 
-            win = 1
+            win += 1
 
     if win == 0:
 
@@ -406,10 +402,6 @@ while quit == 0:
     if outstr == "q":
 
         break
-
-    if outstr != "q":
-
-        quit = 0
 
 ## THE GHOST OF THE SHADOW ##
 

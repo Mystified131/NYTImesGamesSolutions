@@ -566,11 +566,11 @@ for pitr in range(1000):
             if elemz != 0:
                 ctr += 1
     
-    if ctr == 80:
+    if ctr == 81:
 
         break
 
-if ctr == 80:
+if ctr == 81:
 
     print("")
 
@@ -579,6 +579,17 @@ if ctr == 80:
     print("")
 
     print("Good work!")
+
+     print("")
+
+    print("Your winning puzzle:")
+
+    print("")
+
+    for elemq in a:
+        print(elemq)
+
+    print("")
 
 
 ## THE GHOST OF THE SHADOW ##
