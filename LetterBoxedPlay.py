@@ -58,6 +58,11 @@ print(letlst)
 
 print("")
 
+orglst = []
+
+for elem in letlst:
+    orglst.append(elem)
+
 letdict = {}
 
 for x in range(12):
@@ -361,7 +366,7 @@ for ctr in range(1000):
 
     print("")
 
-    print(letlst)
+    print(orglst)
 
     print("")
 
@@ -395,11 +400,11 @@ for ctr in range(1000):
 
         print("")
 
-    outstr = input("Press q to quit or anything else to continue: ")
+    utstr = input("Press q to quit or anything else to continue: ")
 
     print("")
 
-    if outstr == "q":
+    if utstr == "q":
 
         break
 
