@@ -418,13 +418,14 @@ for ctr in range(1000):
 
         break
 
+print("")
+
 print("Thanks for playing!")
 
 print("")
 
 print("Your final score is: ", pts)
 
-print("")
 
 ## THE GHOST OF THE SHADOW ##
 
