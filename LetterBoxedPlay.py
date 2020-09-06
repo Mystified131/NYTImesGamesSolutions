@@ -217,7 +217,7 @@ for elem in wdlst:
 
                                         #print ([elem, elem2, elem3])
 
-                                        print("Generating possible answers. Please wait. . .")
+                                        print("Generating possible answers: ", len(subs) ". Please wait.")
 
                                         print("")
 
@@ -362,6 +362,8 @@ print("See the solution document in the same folder as your code.")
 
 print("")
 
+pts = 0
+
 for ctr in range(1000):
 
     print("")
@@ -394,13 +396,19 @@ for ctr in range(1000):
 
             win += 1
 
+            pts += 1
+
             subs.remove(elem)
 
     if win == 0:
 
-        print("Not in our calculated 3-word list. Sorry.")
+        print("Not in our calculated 3-word list, or did you repeat one? Sorry.")
 
         print("")
+
+    print("Your total points are: ", pts)
+
+    print("")
 
     utstr = input("Press q to quit or anything else to continue: ")
 
@@ -409,6 +417,14 @@ for ctr in range(1000):
     if utstr == "q":
 
         break
+
+print("Thanks for playing!")
+
+print("")
+
+print("Your final score is: ", pts)
+
+print("")
 
 ## THE GHOST OF THE SHADOW ##
 
