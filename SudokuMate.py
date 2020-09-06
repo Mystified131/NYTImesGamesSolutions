@@ -580,7 +580,7 @@ if ctr == 81:
 
     print("Good work!")
 
-     print("")
+    print("")
 
     print("Your winning puzzle:")
 
