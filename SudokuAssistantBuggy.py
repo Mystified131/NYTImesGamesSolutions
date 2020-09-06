@@ -1,6 +1,16 @@
 import datetime
 
-a = []
+#a = []
+
+a = [[0, 0, 1, 7, 0, 0, 5, 0, 0],
+[0, 0, 7, 2, 4, 0, 0, 0, 0],
+[0, 4, 0, 0, 1, 8, 9, 0, 7],
+[0, 6, 0, 0, 0, 0, 0, 0, 8],
+[0, 0, 9, 0, 2, 0, 0, 1, 0],
+[7, 0, 8, 0, 5, 6, 2, 0, 0],
+[0, 0, 0, 0, 0, 0, 4, 3, 0],
+[0, 0, 0, 0, 0, 0, 6, 0, 0],
+[5, 0, 6, 0, 0, 0, 0, 0, 0]]
 
 for pitr in range(1000):
 
@@ -28,11 +38,11 @@ for pitr in range(1000):
 
         print("")
 
-        xv = int(input("Please enter the row of the new value (0-8): "))
+        xy = int(input("Please enter the row of the new value (0-8): "))
 
         print("")
 
-        xy = int(input("Please enter the column of the new value (0-8): "))
+        xv = int(input("Please enter the column of the new value (0-8): "))
 
         print("")
 
@@ -56,17 +66,6 @@ for pitr in range(1000):
 
             a.append(shlst)
 
-    print("")
-
-    print("Your entry:")
-
-    print("")
-
-    for elemq in a:
-        print(elemq)
-
-    print("")
-        
     suba = []
 
     subb = []
@@ -166,6 +165,18 @@ for pitr in range(1000):
             tup = tuple(subh)
 
         subi.append(tup)
+
+    print("")
+
+    for elem in(subi):
+        if len(elem) == 0:
+            print("Shows error.")
+            print("")
+        if len(elem) > 0:
+            print(elem)
+            print("")
+
+    print("")
 
     perma = []
 
