@@ -394,6 +394,8 @@ for ctr in range(1000):
 
             win += 1
 
+            subs.remove(elem)
+
     if win == 0:
 
         print("Not in our calculated 3-word list. Sorry.")
