@@ -82,4 +82,3 @@ for ctr in range(10,0,-1):
         print("That is not correct! Keep trying and guessing!")
 
         print("")
-
