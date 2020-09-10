@@ -205,7 +205,7 @@ for ctr in range(1000):
 
     print("")
 
-    anstr = input("Please enter a guess, with 5 or fewer total letters: ")
+    anstr = input("Please enter a guess, 4 or 5 total letters: ")
 
     
     if anstr.upper() not in wdlst:
