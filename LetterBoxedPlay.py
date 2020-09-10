@@ -3,6 +3,7 @@ from itertools import permutations
 import random
 from subprocess import call
 import datetime
+import sys
 
 right_now = datetime.datetime.now().isoformat()
 tlist = []
@@ -416,15 +417,15 @@ for ctr in range(1000):
 
     if utstr == "q":
 
-        break
+        print("")
 
-print("")
+        print("Thanks for playing!")
 
-print("Thanks for playing!")
+        print("")
 
-print("")
+        print("Your final score is: ", pts)
 
-print("Your final score is: ", pts)
+        sys.exit()
 
 
 ## THE GHOST OF THE SHADOW ##
