@@ -245,9 +245,13 @@ for ctr in range(1000):
 
     qtstr = input("Please press q to quit, or anything else to continue: ")
 
-    if qtstr == "q":
+    if qtstr == "q" or len(wdlst == 0):
 
         break
+
+print("")
+
+print("You have indicated q, or the list of words is finished.")
 
 print("")
 
