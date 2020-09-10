@@ -415,11 +415,11 @@ for ctr in range(1000):
 
     print("")
 
-    if utstr == "q":
+    if utstr == "q" or len(subs) == 0:
 
         print("")
 
-        print("Thanks for playing!")
+        print("Thanks for playing! You have pressed q or there are no more word choices.")
 
         print("")
 
