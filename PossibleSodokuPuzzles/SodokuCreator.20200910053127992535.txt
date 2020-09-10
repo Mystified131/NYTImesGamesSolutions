@@ -1,0 +1,23 @@
+Viable Sodoku Instance-- Created: 20200910053127992535
+
+Level: Hard
+
+7  X  3  X  9  X  X  4  X  
+2  X  5  X  X  6  X  X  X  
+X  X  X  2  4  7  1  X  5  
+X  X  X  3  X  X  8  X  X  
+X  X  6  7  X  1  2  9  X  
+8  9  X  4  6  X  X  X  X  
+X  X  X  X  X  X  9  X  X  
+X  X  X  9  X  X  X  X  X  
+9  6  X  X  7  4  X  X  3  
+
+7  1  3  5  9  8  6  4  2  
+2  4  5  1  3  6  7  8  9  
+6  8  9  2  4  7  1  3  5  
+1  2  4  3  5  9  8  6  7  
+3  5  6  7  8  1  2  9  4  
+8  9  7  4  6  2  3  5  1  
+4  3  1  6  2  5  9  7  8  
+5  7  8  9  1  3  4  2  6  
+9  6  2  8  7  4  5  1  3  
