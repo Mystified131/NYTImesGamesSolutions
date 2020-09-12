@@ -3,6 +3,7 @@ import random
 import cv2
 import sys
 from PIL import Image 
+from subprocess import call
 
 def sp_noise(image,prob):
     '''
@@ -36,7 +37,13 @@ print("Try to guess who or what you are seeing as soon as you can.")
 
 print("")
 
-anslst = ["Ringo Starr", "Ringo", "Starr", "Beatle", "Beatle's Drummer", "A Beatle"]
+imlst = ["image0.jpg", "image1,jpg", "image2.jpg", "image3.jpg"]
+
+ilen = len(imlst)
+
+chin = random.randrange(ilen)
+
+anslst = [("Ringo Starr", "Ringo", "Starr", "Beatle", "Beatle's Drummer", "A Beatle"), ("Paul McCartney", "Paul", "McCCartney", "Beatle", "Beatle's Singer", "A Beatle"), ("John Lennon", "John", "Lennon", "Beatle", "Beatle's Singer", "A Beatle") ,("George Harrison", "George", "Harrison", "Beatle", "Beatle's Guitarist", "A Beatle") ]
 
 for ctr in range(10,0,-1):
     
@@ -48,7 +55,7 @@ for ctr in range(10,0,-1):
     
     print("Working on image intensity: ", ctr)
 
-    image = cv2.imread('image.jpg', 0) # Only for grayscale image
+    image = cv2.imread(imlst[chin], 0) # Only for grayscale image
     noise_img = sp_noise(image, prob)
 
     cv2.imwrite("mysteryimage.jpg", noise_img)
@@ -65,15 +72,23 @@ for ctr in range(10,0,-1):
 
     corr = 0
 
-    for elem in anslst:
+    for elem in anslst[chin]:
         if ans.lower() == elem.lower():
             corr = 1
 
     if corr > 0:
 
-        print("You are correct! The image is of Ringo Starr, the Beatles' drummer!")
+        print("You are correct! The image is of", anslst[chin][0], "of the Beatles!")
 
         print("")
+
+        rstr = input("Press q to quit or anything else to play again: ")
+
+        print("")
+
+        if rstr != "q":
+
+            call(["python", "ImageNoiseGame.py"])
 
         sys.exit()
 
@@ -82,3 +97,8 @@ for ctr in range(10,0,-1):
         print("That is not correct! Keep trying and guessing!")
 
         print("")
+
+
+## THE GHOST OF THE SHADOW ##
+
+
